@@ -1,5 +1,5 @@
 
-var horse1, horse2 , horse3,
+var horse1, horse2 , horse3
 var horse1Image, horse2Image , horse3Image,grassImage, grass
 var wall, tracker1, tracker2, tracker3, tracker4
 function preload() {
