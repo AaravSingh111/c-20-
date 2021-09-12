@@ -1,12 +1,11 @@
 
-var horse1, horse2 , horse3, horse4
-var horse1Image, horse2Image , horse3Image, horse4Image, grassImage, grass
+var horse1, horse2 , horse3,
+var horse1Image, horse2Image , horse3Image,grassImage, grass
 var wall, tracker1, tracker2, tracker3, tracker4
 function preload() {
   horse1Image=loadImage("horse1.png")
   horse2Image=loadImage("horse2.png")
   horse3Image=loadImage("horse3.png")
-  horse4Image=loadImage("horse4.png")
   grassImage=loadImage("Grass.png")
 }
 
@@ -27,9 +26,6 @@ function setup(){
   horse3=createSprite(10,340)
   horse3.addImage("horse3",horse3Image)
   horse3.scale=0.2
-  horse4=createSprite(10,460)
-  horse4.addImage("horse4",horse4Image)
-  horse4.scale=0.2
 
 }
 
@@ -52,8 +48,7 @@ function draw(){
   }if (frameCount%15===0){
     horse2.velocityX=random(3,7)
     horse3.velocityX=random(3,7)
-    horse4.velocityX=random(3,7)
-    
+        
   } 
 
 if (wall){
@@ -61,8 +56,6 @@ if (wall){
     horse2.velocityX=0
   }if(wall.isTouching(horse3)){
     horse3.velocityX=0
-  }if(wall.isTouching(horse4)){
-    horse4.velocityX=0
   }if(wall.isTouching(horse1)){
     horse1.velocityX=0
   }
